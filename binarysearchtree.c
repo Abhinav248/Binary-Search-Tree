@@ -514,6 +514,43 @@ void levelbylevelorderedprinting(struct node *root)
 }
 */
 
+
+/*
+//right view algorithm
+void rightview(struct node *root)
+{
+    if(root==NULL)
+        return;
+    Queue q; // let a queue be created and implemented using linked list
+    EnQueue(root);
+    EnQueue(NULL);
+    struct node *curr,*prev;
+    prev=NULL;
+    while(!isEmpty(q))
+    {
+        curr=DeQueue();
+        if(prev==curr)
+            break;
+        else if(curr==NULL)
+        {
+            Enqueue(curr);
+            printf("\n");
+        }
+        else
+        {
+            if(front(q)==NULL)//front(q) returns front item from the queue
+                printf("%d",curr->data);
+            if(curr->lchild)
+                EnQueue(curr->lchild);
+            if(curr->rchild)
+                EnQueue(root->rchild);
+        }
+        prev=curr;
+    }
+}
+*/
+
+
 /*
 //reverse level reverse order printing algorithm
 void reverselevelbylevelreverseorderprinting(struct node *root)
