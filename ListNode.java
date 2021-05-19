@@ -8,7 +8,7 @@ public class ListNode {
     private ListNode next;
 
     public ListNode() {
-        //Non Parameterized Constructer
+        // Non Parameterized Constructer
     }
 
     public ListNode(int value) {
